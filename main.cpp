@@ -5,17 +5,21 @@ using namespace std;
 
 int main() {
     string userNoise;
-    cout << "What does a goose say? ";
-    cin >> userNoise;
-    std::transform(userNoise.begin(), userNoise.end(), userNoise.begin(),
-        [](unsigned char c){ return std::tolower(c); });
+    string lowerUserNoise;
+    cout << "What does a goose say? " << endl;
 
-    while (userNoise != "honk") {
-        cout << "You are absolutely incorrect. Please try again.\n";
-
-        cout << "What does a goose say? ";
+    do {
         cin >> userNoise;
-    }
+
+        lowerUserNoise = "";
+
+        for(int i = 0; i < userNoise.size(); i++) {
+            lowerUserNoise += tolower(userNoise.at(i));
+        }
+    } while(lowerUserNoise != "honk");
+
+    cout << "Honk honk" << endl;
+
 
     return 0;
 }
