@@ -25,7 +25,7 @@ int main() {
         
     } while(lowerUserNoise != "honk");
 
-    cout << "Honky tonky (Not Honk Honk)" << endl;
+    cout << "Honky tonky!!!" << endl;
 
     return 0;
 }
