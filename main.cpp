@@ -18,9 +18,18 @@ int main() {
     while (userNoise != "honk") {
         cout << "You are absolutely incorrect. Please try again.\n";
 
-        cout << "What does a goose say? ";
+    do {
         cin >> userNoise;
-    }
+
+        lowerUserNoise = "";
+
+        for(int i = 0; i < userNoise.size(); i++) {
+            lowerUserNoise += tolower(userNoise.at(i));
+        }
+    } while(lowerUserNoise != "honk");
+
+    cout << "Honk honk" << endl;
+
 
     return 0;
 }
